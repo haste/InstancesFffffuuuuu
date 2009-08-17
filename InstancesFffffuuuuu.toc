@@ -1,7 +1,7 @@
 ## Interface: 30200
 ## Title: InstancesFffffuuuuu
 ## Author: Haste
-## Version: 1.1
+## Version: 1.2
 ## X-eMail: troeks@gmail.com
 ## Notes: Additional instances cannot be launched, please try again later. FFfffffuuuuuu counter.
 ## SavedVariables: InstancesFffffuuuuuDB
