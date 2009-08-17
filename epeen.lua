@@ -1,6 +1,13 @@
 local db
 local frame = CreateFrame"Frame"
 
+-- Block the default messages:
+ChatFrame_AddMessageEventFilter("CHAT_MSG_SYSTEM", function(self, event, msg)
+	if(msg == TRANSFER_ABORT_TOO_MANY_REALM_INSTANCES) then
+		return true
+	end
+end)
+
 -- Suddenly Znat appears, with custom messages!
 local messages = {
 	[100] = "Grats on still trying, that's 100 instances aborted!",
