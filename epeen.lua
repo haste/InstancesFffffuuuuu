@@ -36,7 +36,7 @@ function frame:CHAT_MSG_SYSTEM(event, msg)
 		if(messages[c]) then
 			UIErrorsFrame:AddMessage(string.format(messages[c], c))
 		else
-			UIErrorsFrame:AddMessage(string.format("%d aborted instances!", c))
+			UIErrorsFrame:AddMessage(string.format("%d instance launches aborted!", c))
 		end
 
 		db[t] = c
