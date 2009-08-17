@@ -48,3 +48,20 @@ frame:SetScript("OnEvent", function(self, event, ...)
 end)
 
 frame:RegisterEvent"ADDON_LOADED"
+
+SLASH_INSTANCE_FU1 = '/fu'
+SlashCmdList['INSTANCE_FU'] = function()
+	local type = ChatFrameEditBox:GetAttribute"chatType"
+	local count = db[date"%y%m%d"]
+	if(count) then
+		local text = string.format("I've tried to enter %d instances today, but the instance server was too busy >:'(", count)
+		if(type == "WHISPER") then
+			SendChatMessage(text, type, nil, ChatFrameEditBox:GetAttribute"tellTarget")
+		elseif ( type == "CHANNEL") then
+			SendChatMessage(text, type, nil, ChatFrameEditBox:GetAttribute"channelTarget")
+		else
+			SendChatMessage(text, type)
+		end
+	end
+end
+
