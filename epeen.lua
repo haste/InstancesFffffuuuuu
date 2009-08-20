@@ -50,6 +50,8 @@ end)
 frame:RegisterEvent"ADDON_LOADED"
 
 SLASH_INSTANCE_FU1 = '/fu'
+SLASH_INSTANCE_FU2 = '/ins'
+
 SlashCmdList['INSTANCE_FU'] = function()
 	local type = ChatFrameEditBox:GetAttribute"chatType"
 	local count = db[date"%y%m%d"]
