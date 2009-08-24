@@ -25,7 +25,7 @@ function frame:ADDON_LOADED(event, addon)
 			[700] = "You still dont get it do you?",
 			[800] = "Man, give up already.",
 			[900] = "Something tells me you wont get into the instance",
-			[1000] = "Really? 1000 times? Go try get |cffffff00|Hachievement:2336:" .. UnitGUID("player") .. ":0:0:0:0:0:0:0:0|h[Insane in the Membrane]|h|r instead!"
+			[1000] = "Really? 1000 times? Go try get " .. GetAchievementLink(2336) .. " instead!"
 		}
 
 		self:RegisterEvent"CHAT_MSG_SYSTEM"
