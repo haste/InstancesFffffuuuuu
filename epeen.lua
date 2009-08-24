@@ -25,7 +25,9 @@ function frame:ADDON_LOADED(event, addon)
 			[700] = "You still dont get it do you?",
 			[800] = "Man, give up already.",
 			[900] = "Something tells me you wont get into the instance",
-			[1000] = "Really? 1000 times? Go try get " .. GetAchievementLink(2336) .. " instead!"
+			-- Using GetAchievementLink(2336) actually crashes WoW. Most likely due to the
+			-- fact that it attempt to fetch the player's guid, but doesn't have it (yet).
+			[1000] = "Really? 1000 times? Sounds like it's time to get |cffffff00[" .. (select(2,GetAchievementInfo(2336))) .. "]|r instead!"
 		}
 
 		self:RegisterEvent"CHAT_MSG_SYSTEM"
